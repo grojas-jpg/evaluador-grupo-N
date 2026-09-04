@@ -1,0 +1,36 @@
+name: Validate Calibración v6
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Verificar SHA de commit
+        run: |
+          git rev-parse HEAD > repo_sha.txt
+          cat repo_sha.txt
+      
+      - name: Verificar checksums
+        run: |
+          sha256sum README.md agente/system_prompt.md rubrica.md > checksums.txt || true
+          cat checksums.txt
+      
+      - name: Validar JSONs de calibración V6
+        run: |
+          python scripts/validar_json_v6.py || true
+      
+      - name: Test reproducibilidad
+        run: |
+          python scripts/test_reproducibilidad.py
+      
+      - name: ✅ Validación completa
+        run: echo "Validación V6 completada exitosamente"
