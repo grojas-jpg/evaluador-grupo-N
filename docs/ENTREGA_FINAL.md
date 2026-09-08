@@ -17,6 +17,6 @@ La app pública expone el runner determinístico complementario V5. La fuente no
 - PR #13: mergeado.
 - PR #15: mergeado.
 - PR #14: cerrado sin mergear, con sus aportes útiles absorbidos/documentados.
-- `main`: candidata final.
+- `main`: versión final de entrega.
 - CI post-merge: success.
 - Vercel: deployment de producción READY y accesible públicamente.
