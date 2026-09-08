@@ -1,0 +1,1 @@
+El deployment público de la entrega final se realiza desde el fork sincronizado `TomyVrs/evaluador-grupo-N`, conectado a Vercel. El repositorio oficial de entrega sigue siendo `grojas-jpg/evaluador-grupo-N`.
