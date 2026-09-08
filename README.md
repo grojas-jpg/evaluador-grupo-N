@@ -118,7 +118,7 @@ El detalle comentario por comentario está en `docs/AUDITORIA_FINAL_PR13_PR14.md
 - PR #13: **mergeado**.
 - PR #15: **mergeado**.
 - PR #14: **cerrado sin mergear**.
-- `main`: **candidata final**.
+- `main`: **versión final de entrega**.
 - CI post-merge: **success**.
 - App pública Vercel: **READY** y accesible en `https://evaluador-v5-web.vercel.app`.
 
